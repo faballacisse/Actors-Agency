@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- CDN for Font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+  <!-- Cdn for Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <!-- NAV BAR -->
+  <!-- https://getbootstrap.com/docs/4.0/components/navbar/#nav -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">FigurActors</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Availability</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Actors</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <main class="container">
+    <hr>
+    <section class="row">
+      <h1 class="display-4">Pick a category:</h1>
+    </section>
+    <section class="row">
+      <div class="mr-auto ml-auto btn-group btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-primary active">
+          <input type="radio" value="male" name="options" id="option1" autocomplete="off" checked>
+          <i class="fas fa-male d-block"></i>
+          Male
+        </label>
+        <label class="btn btn-primary">
+          <input type="radio" value="female" name="options" id="option2" autocomplete="off">
+          <i class="fas fa-female d-block"></i>
+          Female
+        </label>
+        <label class="btn btn-primary">
+          <input type="radio" value="baby" name="options" id="option3" autocomplete="off">
+          <i class="fas fa-baby d-block"></i>
+          Baby
+        </label>
+      </div>
+    </section>
+    <hr>
+    <!-- the form should be in two column -->
+    <form action="#">
+      <!-- .form-row to put them on the same line -->
+      <div class="form-row">
+        <!-- .col-6 so they use half of the space -->
+        <div class="form-group col-md-6">
+          <label for="inputCompany">Company</label>
+          <input type="text" class="form-control" id="inputCompany" placeholder="Company Name">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputEmail">Email</label>
+          <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="inputCategories">Category</label>
+          <select id="inputCategories" class="form-control">
+            <option value="male" selected>Male</option>
+            <option value="female">Female</option>
+            <option value="baby">Baby</option>
+          </select>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="inputActors">Actor</label>
+          <select id="inputActors" class="form-control">
+            <option value="" selected>Choose an actor</option>
+          </select>
+        </div>
+      </div>
+      <input type="submit" class="btn btn-primary" value="Ask for availability">
+    </form>
+    <hr>
+    <!-- cards grid -->
+    <div class="card-columns">
+      <!-- One example card -->
+      <div class="card d-none">
+        <img class="card-img-top" src="https://randomuser.me/api/portraits/men/29.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Example Card</h5>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <!-- CDN Jquery replaced from official link 3.3.1 SLIM -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <!-- CDN Popper -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <!-- CDN bootstrap -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <script src="scripts/script.js"></script>
+</body>
+
+</html>
